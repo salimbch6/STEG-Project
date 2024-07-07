@@ -1,0 +1,90 @@
+/* styles.css */
+
+/* TableView */
+.table-view {
+    -fx-background-color: #E96151;
+    -fx-border-color: black;
+}
+
+/* Table columns */
+.table-column {
+    -fx-text-fill: black; /* Set text color to black */
+    -fx-border-color: black;
+}
+
+/* Table header */
+.table-header {
+    -fx-background-color: #E96151;
+    -fx-text-fill: black; /* Set text color to black */
+    -fx-border-color: black;
+}
+
+/* Table cells */
+/* Table cells */
+./* Table cells */
+.table-row-cell {
+    -fx-background-color: #E96151; /* Set background color to the theme */
+    -fx-border-color: black;
+    -fx-text-fill: black; /* Set text color to black */
+    -fx-font-weight: bold; /* Set font weight to bold */
+    -fx-padding: 5px; /* Adjust cell padding */
+}
+
+/* Highlighted row */
+.table-row-cell:hover {
+    -fx-background-color: lightgrey; /* Set background color when hovered over */
+}
+
+/* Selected row */
+.table-row-cell:selected {
+    -fx-background-color: #FF4500; /* Set background color when selected */
+}
+
+/* Table cells selected effect */
+.table-row-cell:selected {
+    -fx-background-color: #1F51FF; /* Change to the new color */
+}
+
+/* searchTextField */
+.text-field {
+    -fx-background-color: #E96151;
+    -fx-border-color: black;
+    -fx-prompt-text-fill: grey; /* Set prompt text color to black */
+    -fx-text-fill: black; /* Set text color to black */
+}
+/* styles.css */
+
+/* TextField */
+.text-field {
+    -fx-background-color: #f0f6fc; /* Light blue background */
+    -fx-border-color: #b3d7ff; /* Light blue border */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-padding: 8px; /* Adjust padding */
+    -fx-font-size: 14px; /* Adjust font size */
+}
+
+/* Label */
+.label {
+    -fx-background-color: #f0f6fc; /* Light blue background */
+    -fx-border-color: #b3d7ff; /* Light blue border */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-padding: 5px; /* Adjust padding */
+    -fx-font-size: 14px; /* Adjust font size */
+}
+
+/* Apply the above styles to your captchaTextField and captchaLabel */
+#captchaTextField {
+    -fx-background-color: #f0f6fc; /* Light blue background */
+    -fx-border-color: #b3d7ff; /* Light blue border */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-padding: 8px; /* Adjust padding */
+    -fx-font-size: 14px; /* Adjust font size */
+}
+
+#captchaLabel {
+    -fx-background-color: #f0f6fc; /* Light blue background */
+    -fx-border-color: #b3d7ff; /* Light blue border */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-padding: 5px; /* Adjust padding */
+    -fx-font-size: 14px; /* Adjust font size */
+}

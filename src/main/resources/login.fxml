@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.userController">
+   <left>
+      <AnchorPane prefHeight="568.0" prefWidth="314.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <AnchorPane prefHeight="586.0" prefWidth="830.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameTextField" layoutX="149.0" layoutY="214.0" prefHeight="34.0" prefWidth="220.0" promptText="Username" style="-fx-background-radius: 15px;" />
+            <Button fx:id="loginButton" layoutX="92.0" layoutY="398.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="310.0" style="-fx-background-color: #1F51FF; -fx-background-radius: 30px;" text="Login" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="92.0" layoutY="445.0" mnemonicParsing="false" onAction="#CancelButtonOnAction" prefHeight="26.0" prefWidth="310.0" style="-fx-background-color: #1F51FF; -fx-background-radius: 30px;" text="Cancel" textFill="WHITE" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="66.0" layoutY="169.0" prefHeight="18.0" prefWidth="362.0" textFill="#f20404" />
+            <PasswordField fx:id="enterPasswordField" layoutX="148.0" layoutY="285.0" prefHeight="33.0" prefWidth="222.0" promptText="Password" style="-fx-background-radius: 15px;" />
+            <Hyperlink fx:id="registerLink" alignment="CENTER" layoutX="96.0" layoutY="488.0" onAction="#openRegisterPage" prefHeight="24.0" prefWidth="302.0" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="121.0" layoutY="309.0" size="22" wrappingWidth="14.942875862121582" />
+            <FontAwesomeIconView glyphName="USER" layoutX="121.0" layoutY="240.0" size="22" text="" />
+            <Hyperlink fx:id="forgetPasswordLink" alignment="CENTER" layoutX="115.0" layoutY="363.0" onAction="#forgetPasswordOnAction" prefHeight="24.0" prefWidth="265.0" />
+            <CheckBox fx:id="showpasswordCheckBox" layoutX="155.0" layoutY="330.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="18.0" prefWidth="115.0" text="Show Password" />
+            <TextField fx:id="showpasswordField" layoutX="148.0" layoutY="285.0" prefHeight="33.0" prefWidth="222.0" promptText="Password" style="-fx-background-radius: 15px;" />
+            <ImageView fx:id="brandingImageView" fitHeight="657.0" fitWidth="390.0" layoutX="477.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../target/classes/steganim.gif" />
+               </image>
+            </ImageView>
+            <TextField fx:id="captchaTextField" layoutX="132.0" layoutY="578.0" prefHeight="33.0" prefWidth="230.0" promptText="Enter Recaptcha Here" styleClass="text-field" stylesheets="@styles.css" />
+            <Label fx:id="captchaLabel" alignment="CENTER" layoutX="186.0" layoutY="547.0" prefHeight="18.0" prefWidth="122.0" styleClass="label" stylesheets="@styles.css" />
+            <ImageView fx:id="captchaImageView" fitHeight="27.0" fitWidth="31.0" layoutX="328.0" layoutY="583.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../target/classes/captcha.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="stegImageView" fitHeight="105.0" fitWidth="332.0" layoutX="70.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../target/classes/steglogo2.png" />
+               </image>
+            </ImageView>
+
+
+
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
