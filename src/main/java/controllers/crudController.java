@@ -340,26 +340,9 @@ public class crudController implements Initializable {
 
                 // Update etat in the database
                 userServices.updateEtat(connectDB, user.getAccount_id(), newEtat);
-                try{
-                Stage stage = (Stage) actionButton.getScene().getWindow();
-                stage.close();
-
-                // Load the crud.fxml file
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/crud.fxml"));
-                Parent root = loader.load();
-
-                // Create a new stage for the crud.fxml window
-                Stage crudStage = new Stage();
-                crudStage.setScene(new Scene(root));
-                crudStage.setTitle("CRUD Interface");
-
-                // Show the crud.fxml window
-                crudStage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
                 // Refresh TableView
+                user.setEtat(newEtat); // Update the user's etat in the table
                 getTableView().refresh();
             });
         }
@@ -373,14 +356,18 @@ public class crudController implements Initializable {
                 User user = getTableView().getItems().get(getIndex());
                 if (user.getEtat() == 0) {
                     actionButton.setText("Ban");
+                    actionButton.getStyleClass().removeAll("unban-button");
+                    actionButton.getStyleClass().add("ban-button");
                 } else {
                     actionButton.setText("Unban");
+                    actionButton.getStyleClass().removeAll("ban-button");
+                    actionButton.getStyleClass().add("unban-button");
                 }
+                actionButton.getStyleClass().add("action-button");
                 setGraphic(actionButton);
             }
         }
     }
-
 
 
 }

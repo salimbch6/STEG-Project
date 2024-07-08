@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="567.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.recAdminController">
+<AnchorPane prefHeight="567.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.recAdminController">
    <children>
-      <Label layoutX="373.0" layoutY="201.0" prefHeight="42.0" prefWidth="106.0" text="REC ADMIN" />
+      <TableView fx:id="tableRec" layoutX="10.0" layoutY="88.0" prefHeight="391.0" prefWidth="986.0" stylesheets="@styles.css">
+        <columns>
+          <TableColumn fx:id="idR" prefWidth="94.39999008178711" text="Identifiant" />
+          <TableColumn fx:id="nomR" prefWidth="58.399993896484375" text="Nom" />
+            <TableColumn fx:id="prenomR" prefWidth="74.4000244140625" text="Prenom" />
+            <TableColumn fx:id="adresseR" prefWidth="84.00001525878906" text="Adresse" />
+            <TableColumn fx:id="codeR" prefWidth="104.0" text="Code Postal" />
+            <TableColumn fx:id="numtelR" prefWidth="72.0" text="NºTelephone" />
+            <TableColumn fx:id="numcompR" prefWidth="104.800048828125" text="NºCompteur" />
+            <TableColumn fx:id="dateR" prefWidth="68.0" text="Date Incident" />
+            <TableColumn fx:id="lieuR" prefWidth="112.79998779296875" text="Lieu Incident" />
+            <TableColumn fx:id="objetR" minWidth="0.0" prefWidth="122.4000244140625" text="Objets Endommagées" />
+            <TableColumn fx:id="marqueR" prefWidth="76.79996337890623" text="Marque" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

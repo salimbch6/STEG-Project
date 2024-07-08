@@ -7,28 +7,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="901.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.crudController">
+<AnchorPane prefHeight="600.0" prefWidth="965.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.crudController">
    <children>
-      <TableView fx:id="userT" layoutX="12.0" layoutY="145.0" prefHeight="326.0" prefWidth="884.0" style="-fx-background-color: #1F51FF;" stylesheets="@styles.css">
+      <TableView fx:id="userT" layoutX="12.0" layoutY="145.0" prefHeight="368.0" prefWidth="934.0" stylesheets="@styles.css">
         <columns>
-          <TableColumn fx:id="idColumn" prefWidth="67.99996566772461" text="account_id" />
-          <TableColumn fx:id="firstnameColumn" prefWidth="98.39998626708984" text="Firstname" />
-            <TableColumn fx:id="lastnameColumn" prefWidth="123.19998168945312" text="Lastname" />
-            <TableColumn fx:id="usernameColumn" prefWidth="122.4000244140625" text="Username" />
-            <TableColumn fx:id="emailColumn" prefWidth="153.60006713867188" text="Email" />
-            <TableColumn fx:id="passwordColumn" prefWidth="119.199951171875" text="Password" />
-            <TableColumn fx:id="imageColumn" prefWidth="94.39990234375" text="Image" />
-            <TableColumn fx:id="numberColumn" prefWidth="75.0" text="Number" />
-            <TableColumn fx:id="actionColumn" prefWidth="112.800048828125" text="Action" />
+          <TableColumn fx:id="idColumn" prefWidth="96.0" text="Identifiant" />
+          <TableColumn fx:id="firstnameColumn" prefWidth="91.20001220703125" text="Nom" />
+            <TableColumn fx:id="lastnameColumn" prefWidth="91.19998168945312" text="Prenom" />
+            <TableColumn fx:id="usernameColumn" prefWidth="92.0" text="Pseudo" />
+            <TableColumn fx:id="emailColumn" prefWidth="157.5999755859375" text="Email" />
+            <TableColumn fx:id="passwordColumn" prefWidth="120.0" text="Mot de Passe" />
+            <TableColumn fx:id="imageColumn" prefWidth="98.4000244140625" text="Image" />
+            <TableColumn fx:id="numberColumn" prefWidth="112.800048828125" text="NºTelephone" />
+            <TableColumn fx:id="actionColumn" prefWidth="69.5999755859375" text="Action" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-       <Button fx:id="deleteButton" layoutX="185.0" layoutY="512.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #1F51FF;" text="Delete" textFill="WHITE" />
-      <Button fx:id="updateButton" layoutX="516.0" layoutY="512.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="165.0" style="-fx-background-color: #1F51FF;" text="Update" textFill="WHITE" />
-      <TextField fx:id="searchTextField" layoutX="82.0" layoutY="104.0" onAction="#searchOnAction" prefHeight="27.0" prefWidth="222.0" promptText="Search" style="-fx-background-radius: 15px;" />
-      <FontAwesomeIconView glyphName="SEARCH" layoutX="280.0" layoutY="122.0" size="15" wrappingWidth="17.0" />
-      <Button fx:id="pdfButton" layoutX="691.0" layoutY="103.0" mnemonicParsing="false" onAction="#generateOnAction" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: #1F51FF;" text="Generate PDF" textFill="WHITE" />
+       <Button fx:id="deleteButton" layoutX="248.0" layoutY="538.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #1F51FF;" text="Delete" textFill="WHITE" />
+      <Button fx:id="updateButton" layoutX="546.0" layoutY="538.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="165.0" style="-fx-background-color: #1F51FF;" text="Update" textFill="WHITE" />
+      <TextField fx:id="searchTextField" layoutX="74.0" layoutY="95.0" onAction="#searchOnAction" prefHeight="27.0" prefWidth="222.0" promptText="Search" style="-fx-background-radius: 15px;" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="270.0" layoutY="113.0" size="15" wrappingWidth="17.0" />
+      <Button fx:id="pdfButton" layoutX="685.0" layoutY="94.0" mnemonicParsing="false" onAction="#generateOnAction" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: #1F51FF;" text="Generate PDF" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -83,6 +83,6 @@
             </Button>
          </children>
       </VBox>
-      <AnchorPane fx:id="adminContentArea" layoutX="294.0" prefHeight="602.0" prefWidth="918.0" />
+      <AnchorPane fx:id="adminContentArea" layoutX="294.0" prefHeight="602.0" prefWidth="984.0" />
    </children>
 </AnchorPane>

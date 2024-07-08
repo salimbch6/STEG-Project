@@ -33,7 +33,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="envoyerBtn" layoutX="281.0" layoutY="500.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="125.0" stylesheets="@buttons.css" text="Envoyer" />
-      <Button fx:id="cancelBtn" layoutX="533.0" layoutY="500.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="125.0" stylesheets="@buttons.css" text="Quitter" />
+      <Button fx:id="envoyerBtn" layoutX="281.0" layoutY="500.0" mnemonicParsing="false" onAction="#envoyerBtnOnAction" prefHeight="28.0" prefWidth="125.0" stylesheets="@buttons.css" text="Envoyer" />
+      <Button fx:id="cancelBtn" layoutX="533.0" layoutY="500.0" mnemonicParsing="false" onAction="#cancelBtnOnAction" prefHeight="28.0" prefWidth="125.0" stylesheets="@buttons.css" text="Quitter" />
    </children>
 </AnchorPane>

@@ -234,7 +234,7 @@ public class updateController implements Initializable {
             stage.close();
 
             // Load the crud.fxml file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/crud.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/adminDash.fxml"));
             Parent root = loader.load();
 
             // Create a new stage for the crud.fxml window
