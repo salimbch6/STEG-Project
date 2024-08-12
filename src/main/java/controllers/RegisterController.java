@@ -216,32 +216,6 @@ public class RegisterController implements Initializable {
             }
         }
     }
-    /*
-    private void sendSMS(String recipientNumber) {
-        // Check if recipient number starts with '+'
-        if (!recipientNumber.startsWith("+")) {
-            // Prepend country code assuming it's missing
-            recipientNumber = "+216" + recipientNumber;
-        }
-
-        // Initialize Twilio with your account SID and authentication token
-        String ACCOUNT_SID = "AC2f151fcc129fb5ee57da3a935c5b897e";
-        String AUTH_TOKEN = "c5e63dbe6049d51ba786b1b2072ea522";
-        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-
-        // SMS message content
-        String message = "Bonjour Mr(s) ,\n"
-                + "Nous sommes ravis de vous informer que l'inscription a MRBEAST a été affectué avec succées.\n ";
-
-
-        // Send SMS using Twilio API
-        com.twilio.rest.api.v2010.account.Message twilioMessage = com.twilio.rest.api.v2010.account.Message.creator(
-                new com.twilio.type.PhoneNumber(recipientNumber),
-                new com.twilio.type.PhoneNumber("+12674335043"), message).create();
-
-        System.out.println("SMS envoyé : " + twilioMessage.getSid());
-    }
-
-*/
+   
 }
 
