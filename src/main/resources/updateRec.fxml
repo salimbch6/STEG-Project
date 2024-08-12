@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="627.0" prefWidth="1238.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.updateRecController">
+   <children>
+      <TextField fx:id="nomTextField" layoutX="63.0" layoutY="101.0" prefHeight="0.0" prefWidth="240.0" promptText="Nom" stylesheets="@textfield.css" />
+      <TextField fx:id="prenomTextField" layoutX="345.0" layoutY="101.0" prefHeight="0.0" prefWidth="240.0" promptText="Prenom" stylesheets="@textfield.css" />
+      <TextField fx:id="adresseTextField" layoutX="629.0" layoutY="101.0" prefHeight="0.0" prefWidth="240.0" promptText="Adresse" stylesheets="@textfield.css" />
+      <TextField fx:id="codePostalTextField" layoutX="922.0" layoutY="101.0" prefHeight="0.0" prefWidth="240.0" promptText="Code Postal" stylesheets="@textfield.css" />
+      <TextField fx:id="numTelTextField" layoutX="465.0" layoutY="196.0" prefHeight="0.0" prefWidth="240.0" promptText="Nº de téléphone" stylesheets="@textfield.css" />
+      <TextField fx:id="numCompteurTextField" layoutX="778.0" layoutY="196.0" prefHeight="0.0" prefWidth="240.0" promptText="Nº de compteur (STEG)" stylesheets="@textfield.css" />
+      <TextField fx:id="dateTextField" layoutX="269.0" layoutY="308.0" prefHeight="0.0" prefWidth="240.0" promptText="Date d'incident" stylesheets="@textfield.css" />
+      <TextField fx:id="lieuTextFiled" layoutX="617.0" layoutY="308.0" prefHeight="0.0" prefWidth="240.0" promptText="Lieu d'incident" stylesheets="@textfield.css" />
+      <TextField fx:id="marqueTextField" layoutX="507.0" layoutY="487.0" prefHeight="0.0" prefWidth="240.0" promptText="Marque Commerciales" stylesheets="@textfield.css" />
+      <TextField fx:id="objetTextField" layoutX="160.0" layoutY="487.0" prefHeight="0.0" prefWidth="240.0" promptText="Objets endommagés" stylesheets="@textfield.css" />
+      <Label layoutX="62.0" layoutY="53.0" prefHeight="20.0" prefWidth="149.0" text="Cordonnées du tiers : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="261.0" prefHeight="20.0" prefWidth="170.0" text="Date et lieu d'incident :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="439.0" prefHeight="20.0" prefWidth="182.0" text="Les objets endommagés : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="envoyerBtn" layoutX="290.0" layoutY="568.0" mnemonicParsing="false" onAction="#envoyerBtnOnAction" prefHeight="38.0" prefWidth="150.0" stylesheets="@buttons.css" text="Enregister" />
+      <Button fx:id="cancelBtn" layoutX="542.0" layoutY="568.0" mnemonicParsing="false" onAction="#cancelBtnOnAction" prefHeight="38.0" prefWidth="150.0" stylesheets="@buttons.css" text="Quitter" />
+      <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="316.0" layoutY="54.0" prefHeight="18.0" prefWidth="386.0" textFill="RED" />
+      <ComboBox fx:id="typeIncidentComboBox" layoutX="269.0" layoutY="385.0" prefHeight="42.0" prefWidth="240.0" promptText="Type d'incident" stylesheets="@textfield.css" visibleRowCount="2" />
+      <ComboBox fx:id="categorieIncidentComboBox" layoutX="617.0" layoutY="385.0" prefHeight="42.0" prefWidth="240.0" promptText="Catégorie d'incident" stylesheets="@textfield.css" />
+      <TextField fx:id="refTextField" layoutX="92.0" layoutY="196.0" prefHeight="0.0" prefWidth="240.0" promptText="Référence" stylesheets="@textfield.css" />
+   </children>
+</AnchorPane>

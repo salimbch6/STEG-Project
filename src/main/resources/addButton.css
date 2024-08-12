@@ -1,0 +1,26 @@
+
+/* addButton.css */
+
+.add-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #2980b9;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);
+    -fx-graphic: url('add_icon.png');
+    -fx-graphic-text-gap: 10px;
+}
+
+.add-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.add-button:pressed {
+    -fx-background-color: #1f6391;
+}

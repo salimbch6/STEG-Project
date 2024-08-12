@@ -75,7 +75,7 @@ public class userController implements Initializable {
         File captchaFile = new File("target/classes/captcha.png");
         Image captchaImage = new Image(captchaFile.toURI().toString());
         captchaImageView.setImage(captchaImage);
-        File logoFile = new File("target/classes/steglogo2.png");
+        File logoFile = new File("target/classes/steg_logo.png");
         Image logoImage = new Image(logoFile.toURI().toString());
         stegImageView.setImage(logoImage);
 
@@ -117,7 +117,7 @@ public class userController implements Initializable {
 
         // Check if CAPTCHA is correct
         if (!verifyCaptcha(enteredCaptcha)) {
-            loginMessageLabel.setText("Please confirm that you're not a robot.");
+            loginMessageLabel.setText("Veuillez confirmer que vous n'êtes pas un robot.");
             return; // Exit the method if CAPTCHA is incorrect
         }
 
@@ -139,49 +139,42 @@ public class userController implements Initializable {
                             System.out.println(Session.getAccount_id());
                             User u = userServices.getUserById_Account(isValidLogin);
                             System.out.println(u);
+
+                            FXMLLoader loader;
                             if (u.getId_role() == 1) {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/main.fxml"));
-                                Parent root = loader.load();
-                                Scene scene = new Scene(root);
-                                Stage clientStage = new Stage();
-                                clientStage.setTitle("Client Management");
-                                clientStage.setScene(scene);
-                                clientStage.show();
-                                Stage currentStage = (Stage) loginButton.getScene().getWindow();
-                                currentStage.close();
+                                loader = new FXMLLoader(getClass().getResource("/main.fxml"));
                             } else {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/adminDash.fxml"));
-                                Parent root = loader.load();
-                                Scene scene = new Scene(root);
-                                Stage crudStage = new Stage();
-                                crudStage.setTitle("Admin Management");
-                                crudStage.setScene(scene);
-                                crudStage.show();
-                                Stage currentStage = (Stage) loginButton.getScene().getWindow();
-                                currentStage.close();
+                                loader = new FXMLLoader(getClass().getResource("/adminDash.fxml"));
                             }
+
+                            Parent root = loader.load();
+                            Scene scene = new Scene(root);
+                            Stage primaryStage = (Stage) loginButton.getScene().getWindow();
+                            primaryStage.setScene(scene);
+                            primaryStage.setTitle(u.getId_role() == 1 ? "Client Management" : "Admin Management");
+                            primaryStage.setMaximized(true); // Set the stage to maximized
+                            primaryStage.show();
+
                         } else {
-                            loginMessageLabel.setText("Invalid login. Please try again");
+                            loginMessageLabel.setText("Connexion invalide. Veuillez réessayer.");
                         }
                     } else if (etat == 1) {
-                        loginMessageLabel.setText("Login not allowed. Please contact support.");
+                        loginMessageLabel.setText("Connexion non autorisée. Veuillez contacter le support.");
                     }
                 } else {
-                    loginMessageLabel.setText("User not found. Please check your credentials.");
+                    loginMessageLabel.setText("Utilisateur non trouvé. Veuillez vérifier vos informations d'identification.");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-                loginMessageLabel.setText("An error occurred. Please try again later.");
+                loginMessageLabel.setText("Une erreur s'est produite. Veuillez réessayer plus tard.");
             } catch (IOException e) {
                 e.printStackTrace();
                 throw new RuntimeException(e);
             }
         } else {
-            loginMessageLabel.setText("Username/Email and password cannot be blank.");
+            loginMessageLabel.setText("Le nom d'utilisateur/email et le mot de passe ne peuvent pas être vides.");
         }
     }
-
-
 
     public void createAccountForm() {
         try {

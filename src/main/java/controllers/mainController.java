@@ -52,7 +52,7 @@ public class mainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File likeFile = new File("target/classes/likeanimation.gif");
+        File likeFile = new File("target/classes/clientDash.gif");
         Image likeImage = new Image(likeFile.toURI().toString());
         likeImageView.setImage(likeImage);
 

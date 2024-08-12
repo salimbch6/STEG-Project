@@ -1,8 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
+<GridPane hgap="10" prefHeight="518.0" prefWidth="703.0" styleClass="settings-pane" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controllers.settingsAdminController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="200" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10" prefWidth="100" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+    </rowConstraints>
 
-<AnchorPane prefHeight="567.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.settingsAdminController">
+    <!-- General Settings -->
+    <Label styleClass="settings-section-header" stylesheets="@styles.css" text="General Settings" GridPane.columnSpan="2">
+      <GridPane.margin>
+         <Insets left="70.0" />
+      </GridPane.margin></Label>
+    <Separator stylesheets="@styles.css" GridPane.columnSpan="2" GridPane.rowIndex="1" />
 
-</AnchorPane>
+    <Label prefHeight="18.0" prefWidth="69.0" stylesheets="@styles.css" text="Username:" GridPane.rowIndex="2">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="70.0" />
+      </GridPane.margin></Label>
+    <TextField fx:id="usernameField" stylesheets="@textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Email:" GridPane.rowIndex="3">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="70.0" />
+      </GridPane.margin></Label>
+    <TextField fx:id="emailField" stylesheets="@textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <!-- Notifications Settings -->
+    <Label styleClass="settings-section-header" stylesheets="@styles.css" text="Notifications Settings" GridPane.columnSpan="2" GridPane.rowIndex="4">
+      <GridPane.margin>
+         <Insets left="70.0" />
+      </GridPane.margin></Label>
+    <Separator GridPane.columnSpan="2" GridPane.rowIndex="5" />
+
+    <Label text="Enable Notifications:" GridPane.rowIndex="6">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="70.0" />
+      </GridPane.margin></Label>
+    <CheckBox fx:id="notificationsCheckbox" stylesheets="@styles.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label text="Send Daily Reports:" GridPane.rowIndex="7">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="70.0" />
+      </GridPane.margin></Label>
+    <CheckBox fx:id="dailyReportsCheckbox" stylesheets="@styles.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <!-- Save and Cancel Buttons -->
+    <HBox alignment="CENTER_RIGHT" spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="8">
+        <Button onAction="#saveSettings" prefHeight="38.0" prefWidth="126.0" stylesheets="@buttons.css" text="Save" />
+        <Button onAction="#cancelSettings" prefHeight="38.0" prefWidth="116.0" stylesheets="@buttons.css" text="Cancel" />
+    </HBox>
+</GridPane>

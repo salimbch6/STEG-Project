@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="804.0" prefWidth="1257.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeAdminController">
+    <children>
+          <TableView fx:id="StatsTab" layoutX="14.0" layoutY="123.0" prefHeight="642.0" prefWidth="1234.0" stylesheets="@styles.css">
+              <columns>
+            <TableColumn fx:id="titreS" prefWidth="350" />
+                  <TableColumn fx:id="janvierS" minWidth="0.0" prefWidth="92" text="Janvier" />
+                  <TableColumn fx:id="fevrierS" prefWidth="92" text="Février" />
+                  <TableColumn fx:id="marsS" prefWidth="92" text="Mars" />
+                  <TableColumn fx:id="avrilS" prefWidth="92" text="Avril" />
+                  <TableColumn fx:id="maiS" prefWidth="92" text="Mai" />
+                  <TableColumn fx:id="juinS" prefWidth="92" text="Juin" />
+                  <TableColumn fx:id="juilletS" prefWidth="92" text="Juillet" />
+                  <TableColumn fx:id="aoutS" prefWidth="92" text="Aout" />
+                  <TableColumn fx:id="septembreS" prefWidth="92" text="Septembre" />
+                  <TableColumn fx:id="octobreS" prefWidth="92" text="Octobre" />
+                  <TableColumn fx:id="novembreS" prefWidth="92" text="Novembre" />
+                  <TableColumn fx:id="decembreS" prefWidth="92" text="Décembre" />
 
-<AnchorPane prefHeight="567.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeAdminController">
-   <children>
-      <Label layoutX="323.0" layoutY="204.0" prefHeight="58.0" prefWidth="151.0" text="HOME ADMIN" />
-   </children>
+              </columns>
+          </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="481.0" layoutY="33.0" prefHeight="30.0" prefWidth="410.0" text="Suivi des dossiers de responsabilité civile" textFill="#2747b1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2024" alignment="CENTER" layoutX="662.0" layoutY="70.0" prefHeight="18.0" prefWidth="67.0" text="2024" textFill="#2747b1">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="rightArrow" fitHeight="14.0" fitWidth="18.0" layoutX="729.0" layoutY="81.0" onMouseClicked="#swipeYear2OnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../target/classes/right-arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftArrow" fitHeight="14.0" fitWidth="14.0" layoutX="648.0" layoutY="81.0" onMouseClicked="#swipeYearOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../target/classes/left-arrow.png" />
+         </image>
+      </ImageView>
+    </children>
 </AnchorPane>

@@ -8,52 +8,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="613.0" prefWidth="852.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.clientInterfaceController">
+<AnchorPane prefHeight="562.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.clientInterfaceController">
 
    <children>
-      <TextField fx:id="firstnameTextField" layoutX="161.0" layoutY="159.0" prefHeight="30.0" prefWidth="196.0" promptText="Firstname" style="-fx-background-radius: 15px;" />
-      <TextField fx:id="lastnameTextField" layoutX="430.0" layoutY="159.0" prefHeight="30.0" prefWidth="196.0" promptText="Lastname" style="-fx-background-radius: 15px;" />
-      <TextField fx:id="usernameTextField" layoutX="161.0" layoutY="246.0" prefHeight="30.0" prefWidth="196.0" promptText="Username" style="-fx-background-radius: 15px;" />
-      <PasswordField fx:id="setPasswordField" layoutX="161.0" layoutY="351.0" prefHeight="30.0" prefWidth="196.0" promptText="Password" style="-fx-background-radius: 15px;" />
-      <PasswordField fx:id="confirmPasswordField" layoutX="422.0" layoutY="351.0" prefHeight="30.0" prefWidth="196.0" promptText="Confirm Password" style="-fx-background-radius: 15px;" />
-      <Button fx:id="imageButton" layoutX="422.0" layoutY="502.0" mnemonicParsing="false" onAction="#imageOnMouseClicked" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: #1F51FF; -fx-background-radius: 15px;" text="Change Profile Picture" textFill="WHITE" />
-      <Label layoutX="167.0" layoutY="127.0" prefHeight="18.0" prefWidth="100.0" text="Firstname">
+      <TextField fx:id="firstnameTextField" layoutX="216.0" layoutY="127.0" prefHeight="30.0" prefWidth="196.0" promptText="Firstname" stylesheets="@textfield.css" />
+      <TextField fx:id="lastnameTextField" layoutX="485.0" layoutY="127.0" prefHeight="30.0" prefWidth="196.0" promptText="Lastname" stylesheets="@textfield.css" />
+      <TextField fx:id="usernameTextField" layoutX="216.0" layoutY="214.0" prefHeight="30.0" prefWidth="196.0" promptText="Username" stylesheets="@textfield.css" />
+      <PasswordField fx:id="setPasswordField" layoutX="216.0" layoutY="319.0" prefHeight="30.0" prefWidth="196.0" promptText="Password" stylesheets="@textfield.css" />
+      <PasswordField fx:id="confirmPasswordField" layoutX="477.0" layoutY="319.0" prefHeight="30.0" prefWidth="196.0" promptText="Confirm Password" stylesheets="@textfield.css" />
+      <Button fx:id="imageButton" layoutX="484.0" layoutY="489.0" mnemonicParsing="false" onAction="#imageOnMouseClicked" prefHeight="38.0" prefWidth="184.0" stylesheets="@buttons.css" text="Changer Votre Photo" textFill="WHITE" />
+      <Label layoutX="222.0" layoutY="95.0" prefHeight="18.0" prefWidth="100.0" text="Firstname">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="435.0" layoutY="127.0" prefHeight="18.0" prefWidth="100.0" text="Lastname">
+      <Label layoutX="490.0" layoutY="95.0" prefHeight="18.0" prefWidth="100.0" text="Lastname">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="161.0" layoutY="226.0" prefHeight="18.0" prefWidth="100.0" text="Username">
+      <Label layoutX="216.0" layoutY="194.0" prefHeight="18.0" prefWidth="100.0" text="Username">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="167.0" layoutY="331.0" text="Password">
+      <Label layoutX="222.0" layoutY="299.0" text="Password">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="429.0" layoutY="331.0" text="Confirm Password">
+      <Label layoutX="484.0" layoutY="299.0" text="Confirm Password">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Button fx:id="saveButton" layoutX="173.0" layoutY="502.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: #1F51FF; -fx-background-radius: 15px;" text="Save" textFill="WHITE" />
-      <ImageView fx:id="profileImageView" fitHeight="80.0" fitWidth="89.0" layoutX="476.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="429.0" layoutY="226.0" prefHeight="18.0" prefWidth="100.0" text="Email">
+      <Button fx:id="saveButton" layoutX="226.0" layoutY="489.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="30.0" prefWidth="176.0" stylesheets="@buttons.css" text="Enregister" textFill="WHITE" />
+      <ImageView fx:id="profileImageView" fitHeight="80.0" fitWidth="89.0" layoutX="531.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="484.0" layoutY="194.0" prefHeight="18.0" prefWidth="100.0" text="Email">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="emailTextField" layoutX="422.0" layoutY="246.0" prefHeight="30.0" prefWidth="196.0" promptText="Email" style="-fx-background-radius: 15px;" />
-      <Label fx:id="erroreditLabel" alignment="CENTER" layoutX="137.0" layoutY="115.0" prefHeight="18.0" prefWidth="511.0" textFill="RED" />
-      <Label fx:id="valideditLabel" alignment="CENTER" layoutX="240.0" layoutY="115.0" prefHeight="18.0" prefWidth="288.0" textFill="#2900ff" />
-      <TextField fx:id="numberField" layoutX="161.0" layoutY="437.0" prefHeight="30.0" prefWidth="196.0" promptText="Number" style="-fx-background-radius: 15px;" />
-      <Label layoutX="167.0" layoutY="414.0" prefHeight="18.0" prefWidth="100.0" text="Number">
+      <TextField fx:id="emailTextField" layoutX="477.0" layoutY="214.0" prefHeight="30.0" prefWidth="196.0" promptText="Email" stylesheets="@textfield.css" />
+      <Label fx:id="erroreditLabel" alignment="CENTER" layoutX="200.0" layoutY="64.0" prefHeight="18.0" prefWidth="511.0" textFill="RED" />
+      <Label fx:id="valideditLabel" alignment="CENTER" layoutX="304.0" layoutY="64.0" prefHeight="18.0" prefWidth="288.0" textFill="#2900ff" />
+      <TextField fx:id="numberField" layoutX="216.0" layoutY="405.0" prefHeight="30.0" prefWidth="196.0" promptText="Number" stylesheets="@textfield.css" />
+      <Label layoutX="222.0" layoutY="382.0" prefHeight="18.0" prefWidth="100.0" text="Number">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

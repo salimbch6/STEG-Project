@@ -19,17 +19,17 @@
    <top>
       <AnchorPane prefHeight="586.0" prefWidth="830.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="usernameTextField" layoutX="149.0" layoutY="214.0" prefHeight="34.0" prefWidth="220.0" promptText="Username" style="-fx-background-radius: 15px;" />
-            <Button fx:id="loginButton" layoutX="92.0" layoutY="398.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="310.0" style="-fx-background-color: #1F51FF; -fx-background-radius: 30px;" text="Login" textFill="WHITE" />
-            <Button fx:id="cancelButton" layoutX="92.0" layoutY="445.0" mnemonicParsing="false" onAction="#CancelButtonOnAction" prefHeight="26.0" prefWidth="310.0" style="-fx-background-color: #1F51FF; -fx-background-radius: 30px;" text="Cancel" textFill="WHITE" />
+            <TextField fx:id="showpasswordField" layoutX="148.0" layoutY="285.0" prefHeight="33.0" prefWidth="222.0" promptText="Mot de Passe" stylesheets="@textfield.css" />
+            <TextField fx:id="usernameTextField" layoutX="149.0" layoutY="214.0" prefHeight="34.0" prefWidth="220.0" promptText="Pseudo" stylesheets="@textfield.css" />
+            <Button fx:id="loginButton" layoutX="119.0" layoutY="398.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="38.0" prefWidth="277.0" stylesheets="@buttons.css" text="Connecter" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="117.0" layoutY="445.0" mnemonicParsing="false" onAction="#CancelButtonOnAction" prefHeight="38.0" prefWidth="278.0" stylesheets="@buttons.css" text="Quitter" textFill="WHITE" />
             <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="66.0" layoutY="169.0" prefHeight="18.0" prefWidth="362.0" textFill="#f20404" />
-            <PasswordField fx:id="enterPasswordField" layoutX="148.0" layoutY="285.0" prefHeight="33.0" prefWidth="222.0" promptText="Password" style="-fx-background-radius: 15px;" />
+            <PasswordField fx:id="enterPasswordField" layoutX="148.0" layoutY="285.0" prefHeight="33.0" prefWidth="222.0" promptText="Password" stylesheets="@textfield.css" />
             <Hyperlink fx:id="registerLink" alignment="CENTER" layoutX="96.0" layoutY="488.0" onAction="#openRegisterPage" prefHeight="24.0" prefWidth="302.0" />
-            <FontAwesomeIconView glyphName="LOCK" layoutX="121.0" layoutY="309.0" size="22" wrappingWidth="14.942875862121582" />
-            <FontAwesomeIconView glyphName="USER" layoutX="121.0" layoutY="240.0" size="22" text="" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="124.0" layoutY="313.0" size="22" wrappingWidth="14.942875862121582" />
+            <FontAwesomeIconView glyphName="USER" layoutX="124.0" layoutY="242.0" size="22" text="" />
             <Hyperlink fx:id="forgetPasswordLink" alignment="CENTER" layoutX="115.0" layoutY="363.0" onAction="#forgetPasswordOnAction" prefHeight="24.0" prefWidth="265.0" />
-            <CheckBox fx:id="showpasswordCheckBox" layoutX="155.0" layoutY="330.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="18.0" prefWidth="115.0" text="Show Password" />
-            <TextField fx:id="showpasswordField" layoutX="148.0" layoutY="285.0" prefHeight="33.0" prefWidth="222.0" promptText="Password" style="-fx-background-radius: 15px;" />
+            <CheckBox fx:id="showpasswordCheckBox" layoutX="155.0" layoutY="336.0" mnemonicParsing="false" onAction="#showPassword" prefHeight="18.0" prefWidth="115.0" text="Show Password" />
             <ImageView fx:id="brandingImageView" fitHeight="657.0" fitWidth="390.0" layoutX="477.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../target/classes/steganim.gif" />
@@ -44,7 +44,7 @@
             </ImageView>
             <ImageView fx:id="stegImageView" fitHeight="105.0" fitWidth="332.0" layoutX="70.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../target/classes/steglogo2.png" />
+                  <Image url="@../../../target/classes/steg_logo.png" />
                </image>
             </ImageView>
 

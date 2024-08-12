@@ -1,25 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="567.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.recAdminController">
+<AnchorPane prefHeight="785.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.recAdminController">
    <children>
-      <TableView fx:id="tableRec" layoutX="10.0" layoutY="88.0" prefHeight="391.0" prefWidth="986.0" stylesheets="@styles.css">
+       <TableView fx:id="tableRec" editable="true" layoutX="14.0" layoutY="94.0" prefHeight="690.0" prefWidth="1243.0" stylesheets="@styles.css">
         <columns>
-          <TableColumn fx:id="idR" prefWidth="94.39999008178711" text="Identifiant" />
-          <TableColumn fx:id="nomR" prefWidth="58.399993896484375" text="Nom" />
-            <TableColumn fx:id="prenomR" prefWidth="74.4000244140625" text="Prenom" />
-            <TableColumn fx:id="adresseR" prefWidth="84.00001525878906" text="Adresse" />
-            <TableColumn fx:id="codeR" prefWidth="104.0" text="Code Postal" />
-            <TableColumn fx:id="numtelR" prefWidth="72.0" text="NºTelephone" />
-            <TableColumn fx:id="numcompR" prefWidth="104.800048828125" text="NºCompteur" />
-            <TableColumn fx:id="dateR" prefWidth="68.0" text="Date Incident" />
-            <TableColumn fx:id="lieuR" prefWidth="112.79998779296875" text="Lieu Incident" />
-            <TableColumn fx:id="objetR" minWidth="0.0" prefWidth="122.4000244140625" text="Objets Endommagées" />
-            <TableColumn fx:id="marqueR" prefWidth="76.79996337890623" text="Marque" />
+          <TableColumn fx:id="idR" prefWidth="90.39999389648438" text="Identifiant" />
+          <TableColumn fx:id="nomR" prefWidth="88.79998779296875" text="Nom" />
+            <TableColumn fx:id="prenomR" prefWidth="88.79998779296875" text="Prenom" />
+            <TableColumn fx:id="adresseR" prefWidth="135.20001220703125" text="Adresse" />
+            <TableColumn fx:id="codeR" prefWidth="113.5999755859375" text="Code Postal" />
+            <TableColumn fx:id="refR" prefWidth="108.79998779296875" text="Réference" />
+            <TableColumn fx:id="numtelR" prefWidth="149.5999755859375" text="NºTelephone" />
+            <TableColumn fx:id="numcompR" prefWidth="128.79998779296875" text="NºCompteur" />
+            <TableColumn fx:id="typeIncidentR" prefWidth="117.60009765625" text="Type Incident" />
+            <TableColumn fx:id="categorieR" prefWidth="148.800048828125" text="Catégorie Incident" />
+            <TableColumn fx:id="dateR" prefWidth="117.5999755859375" text="Date Incident" />
+            <TableColumn fx:id="lieuR" prefWidth="114.39990234375" text="Lieu Incident" />
+            <TableColumn fx:id="dateRecR" prefWidth="149.5999511718751" text="Date Reclamation" />
+            <TableColumn fx:id="dateNotifR" prefWidth="212.0" text="Date Notification Assurance" />
+            <TableColumn fx:id="dureeR" prefWidth="109.5999755859375" text="Durée 1" />
+            <TableColumn fx:id="dateInspectionR" prefWidth="144.800048828125" text="Date Inspection" />
+            <TableColumn fx:id="dateRecInspectionR" prefWidth="198.39990234375" text="Date Recevoir Inspection" />
+            <TableColumn fx:id="dureeInspectionR" prefWidth="87.2001953125" text="Durée 2" />
+            <TableColumn fx:id="responsabiliteR" prefWidth="159.199951171875" text="Responsabilité" />
+            <TableColumn fx:id="notifierClientR" prefWidth="137.60009765625" text="Notifier Client" />
+            <TableColumn fx:id="demanderFactureR" prefWidth="186.39990234375" text="Demander Facture" />
+            <TableColumn fx:id="dureeNotifClientR" prefWidth="108.000244140625" text="Durée 3" />
+            <TableColumn fx:id="recevoirFactureR" prefWidth="167.199951171875" text="Recevoir Facture" />
+            <TableColumn fx:id="factureR" prefWidth="169.599853515625" text="Facutre" />
+            <TableColumn fx:id="quittanceR" prefWidth="172.0" text="NºQuittance" />
+            <TableColumn fx:id="signatureR" prefWidth="148.0" text="Signature" />
+            <TableColumn fx:id="resolutionR" prefWidth="166.39990234375" text="Résolution" />
+            <TableColumn fx:id="dureeRemboursementR" prefWidth="146.39990234375" text="Durée 4" />
         </columns>
       </TableView>
+      <Button fx:id="deleteButton" layoutX="839.0" layoutY="30.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="38.0" prefWidth="179.0" stylesheets="@buttons.css" text="Supprimer" textFill="WHITE" />
+      <Button fx:id="updateButton" layoutX="595.0" layoutY="30.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="38.0" prefWidth="179.0" stylesheets="@buttons.css" text="Modifier" textFill="WHITE" />
+      <TextField fx:id="searchTextField" layoutX="28.0" layoutY="28.0" onAction="#searchOnAction" prefHeight="42.0" prefWidth="266.0" promptText="Chercher" stylesheets="@textfield.css" />
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="269.0" layoutY="55.0" size="20" wrappingWidth="17.0" />
+      <ImageView fx:id="pdfIcon" fitHeight="64.0" fitWidth="64.0" layoutX="1076.0" layoutY="17.0" onMouseClicked="#generateOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../target/classes/pdf-file.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="excelIcon" fitHeight="64.0" fitWidth="64.0" layoutX="1176.0" layoutY="16.0" onMouseClicked="#generateExcelOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../target/classes/excel.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ajouterButton" layoutX="344.0" layoutY="30.0" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="38.0" prefWidth="179.0" stylesheets="@buttons.css" text="Ajouter" textFill="WHITE" />
    </children>
 </AnchorPane>

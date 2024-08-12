@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="567.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.adminDashController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="602.0" prefWidth="294.0" style="-fx-background-color: #6495ED;">
+      <VBox alignment="TOP_CENTER" prefHeight="602.0" prefWidth="294.0" style="-fx-background-color: #6495ED;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Circle fx:id="imageView" fill="DODGERBLUE" radius="54.0" stroke="BLACK" strokeType="INSIDE">
                <VBox.margin>
@@ -83,6 +83,6 @@
             </Button>
          </children>
       </VBox>
-      <AnchorPane fx:id="adminContentArea" layoutX="294.0" prefHeight="602.0" prefWidth="984.0" />
+      <AnchorPane fx:id="adminContentArea" layoutX="294.0" prefHeight="602.0" prefWidth="1120.0" />
    </children>
 </AnchorPane>
