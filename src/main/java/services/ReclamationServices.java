@@ -462,6 +462,8 @@ public class ReclamationServices {
         }
     }
 
+    public void Reclamation(Connection connection, String nom, String prenom, String adresse, Integer codePostal, String reference, String numTel, String numCompteur, Date date, String lieu, String typeIncident, String categorieIncident, List<String> objetsEndommages, List<String> marques, int i) {
+    }
 }
 
 

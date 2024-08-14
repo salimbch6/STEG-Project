@@ -116,7 +116,7 @@ public class reclamationsController implements Initializable {
         }
     }
 
-   /* @FXML
+    @FXML
     public void envoyerBtnOnAction(ActionEvent event) {
         if (myDataBase == null) {
             return;
@@ -156,10 +156,10 @@ public class reclamationsController implements Initializable {
             alert.setContentText("Votre réclamation a été envoyée avec succès.");
             alert.showAndWait();
 
-        } catch (SQLException | IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     private List<String> getAllObjetsEndommages() {
         List<String> objetsEndommages = new ArrayList<>();
