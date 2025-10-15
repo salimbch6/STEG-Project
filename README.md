@@ -29,5 +29,47 @@ The system provides features for efficient tracking and rapid resolution of cust
 
 ---
 
-## 📂 Project Structure
+## 📸 Application Preview
+
+### 👤 Client Side
+
+<p align="center">
+  <img src="./STEG_IMG/Client_1.png" width="700" alt="Client Dashboard" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Client_2.png" width="700" alt="Client Reclamation Page" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Register.png" width="700" alt="User Registration Page" />
+</p>
+
+---
+
+### 🛠️ Admin Side
+
+<p align="center">
+  <img src="./STEG_IMG/Admin_1.png" width="700" alt="Admin Dashboard" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Admin_2.png" width="700" alt="Admin Complaint Management" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Admin_3.png" width="700" alt="Admin Complaint Details" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Admin_4.png" width="700" alt="Admin Statistics" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Admin_5.png" width="700" alt="Admin Invoice Management" />
+</p>
+
+<p align="center">
+  <img src="./STEG_IMG/Admin_6.png" width="700" alt="Admin Reports" />
+</p>
 
