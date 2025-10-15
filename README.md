@@ -34,6 +34,10 @@ The system provides features for efficient tracking and rapid resolution of cust
 ### 👤 Client Side
 
 <p align="center">
+  <img src="./STEG_IMG/Register.png" width="700" alt="User Registration Page" />
+</p>
+
+<p align="center">
   <img src="./STEG_IMG/Client_1.png" width="700" alt="Client Dashboard" />
 </p>
 
@@ -41,9 +45,7 @@ The system provides features for efficient tracking and rapid resolution of cust
   <img src="./STEG_IMG/Client_2.png" width="700" alt="Client Reclamation Page" />
 </p>
 
-<p align="center">
-  <img src="./STEG_IMG/Register.png" width="700" alt="User Registration Page" />
-</p>
+
 
 ---
 
